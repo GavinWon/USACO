@@ -27,7 +27,7 @@ public class BeautyPageant {
 			for (int j = 0; j < cols; j++) {
 				System.out.print(hide[i][j]);
 			}
-			System.out.println();
+			System.out.println("Like what the f, i steped in tihs");
 		}
 	}
 
