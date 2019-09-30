@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/Users/gavinwong/Dropbox/USACO/.metadata/.plugins/org.eclipse.jdt.core
+2394452597.index
+480723714.index

@@ -1,0 +1,20 @@
+package Bronze;
+
+import java.util.*;
+import java.io.*;
+
+public class BeautyPageant {
+	
+	public static int x; int y;
+
+	public static void main(String[] args) throws IOException {
+		Scanner in = new Scanner(new File("pagneant.in"));
+		PrintWriter out = new PrintWriter(new File("pageant.out"));
+		
+		x = in.nextInt();
+		y = in.nextInt();
+		
+
+	}
+
+}
