@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.131+D:\Repos\USACO\.metadata\.plugins\org.eclipse.jdt.core
 1151569180.index
 3370529603.index
@@ -21,3 +22,10 @@ INDEX VERSION 1.131+D:\Repos\USACO\.metadata\.plugins\org.eclipse.jdt.core
 1459523266.index
 165794779.index
 2772419465.index
+=======
+INDEX VERSION 1.131+/Users/gavinwong/Desktop/Repos/USACO/.metadata/.plugins/org.eclipse.jdt.core
+756625737.index
+1492766893.index
+480723714.index
+669041312.index
+>>>>>>> 20bf35cdfd7dc3fe503746bc72060fefc06fc865

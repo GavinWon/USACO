@@ -1,15 +1,14 @@
-import java.util.HashSet;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Random {
 
-	public static void main(String[] args) {
-		HashSet<String> s = new HashSet<String>();
-		s.add("h");
-		s.add("i");
-		s.add("hi");
-		s.add("hi");
-		System.out.println(s.size());
-
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new FileReader("//Users//gavinwong//Dropbox//USACO//2011November//src//Bronze//pageant.in"));
+		StringTokenizer s1 = new StringTokenizer(in.readLine());
+		System.out.println(s1.nextToken());
+		System.out.println(s1.nextToken());
+		//System.out.println(in.read());
 	}
 
 }
