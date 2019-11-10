@@ -1,19 +1,8 @@
-INDEX VERSION 1.131+D:\Repos\USACO\.metadata\.plugins\org.eclipse.jdt.core
-2449222836.index
-1520500497.index
-2128466327.index
-1345059089.index
-933611177.index
-551473898.index
-3370529603.index
-3714851185.index
-812060626.index
-3201072441.index
-1196485970.index
-237566572.index
-2565415555.index
-3769695930.index
-463033160.index
-1286356409.index
-4256550402.index
-761413482.index
+INDEX VERSION 1.131+/Users/gavinwong/Desktop/Repos/USACO/.metadata/.plugins/org.eclipse.jdt.core
+2603769927.index
+2822147039.index
+4258185249.index
+527986365.index
+3854713432.index
+1492766893.index
+152496678.index
