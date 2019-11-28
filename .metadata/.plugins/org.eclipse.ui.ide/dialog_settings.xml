@@ -30,6 +30,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/gavinwong/Desktop/Repos/USACO/2011December/src/Bronze/escape"/>
 			<item value="/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Bronze"/>
 			<item value="D:\Repos\USACO\2018February"/>
 			<item value="/Users/gavinwong/Desktop/Repos/USACO/TreeSet"/>

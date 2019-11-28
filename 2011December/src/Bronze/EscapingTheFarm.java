@@ -8,10 +8,11 @@ public class EscapingTheFarm {
 	private static int[] input;
 	private static int N;
 	private static int maxCow = 0;
-
-	public static void main(String[] args) throws IOException {
-		Scanner in = new Scanner(new FileReader("D:\\Repos\\USACO\\2011December\\src\\Bronze\\escape.in"));
-		PrintWriter out = new PrintWriter(new FileWriter("D:\\Repos\\USACO\\2011December\\src\\Bronze\\escape.out"));
+	
+	public static void solve(String inFile, String outFile) throws IOException {
+		
+		Scanner in = new Scanner(new FileReader(inFile));
+		PrintWriter out = new PrintWriter(new FileWriter(outFile));
 		
 		N = in.nextInt();
 		input = new int[N];
@@ -23,9 +24,39 @@ public class EscapingTheFarm {
 		
 		out.print(maxCow);
 		out.close();
+	}
 
+	public static void main(String[] args) throws IOException {
+		String folder = "/Users/gavinwong/Desktop/Repos/USACO/2011December/src/Bronze/escape/";
+		for (int i = 1; i <= 10; i++) {
+			String inFile = folder + "I." + i;
+			String myOutFile = folder + "MO." + i;
+			solve(inFile, myOutFile);
+			String correctOutFile = folder + "O." + i;
+			compare (correctOutFile, myOutFile );
+		}
+		
+//		Scanner in = new Scanner(new FileReader("D:\\Repos\\USACO\\2011December\\src\\Bronze\\escape.in"));
+//		PrintWriter out = new PrintWriter(new FileWriter("D:\\Repos\\USACO\\2011December\\src\\Bronze\\escape.out"));
+//		
+//		N = in.nextInt();
+//		input = new int[N];
+//		for (int i = 0; i < N; i++) {
+//			input[i] = in.nextInt();
+//		}
+//		
+//		addOrContinue(0,0,0);
+//		
+//		out.print(maxCow);
+//		out.close();
+//
 	}
 	
+	private static void compare(String correctOutFile, String myOutFile) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public static void addOrContinue(int cowIndex, int numCow, int boatWeight) {
 		
 		if (cowIndex >= N)
