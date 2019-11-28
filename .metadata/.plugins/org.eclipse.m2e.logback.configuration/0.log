@@ -100,5 +100,10 @@
 2019-11-18 15:00:25,180 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 >>>>>>> a85d7ec9465743e4f50de6f255c7c8b985e7cff9
 2019-11-21 21:10:10,707 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+<<<<<<< HEAD
 2019-11-25 22:33:30,233 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2019-11-26 09:17:59,764 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+=======
+2019-11-25 22:14:15,522 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-11-26 18:57:32,981 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+>>>>>>> ef37f0089d157803cdcbcaba6561e1e276e66406
