@@ -26,17 +26,32 @@ public class MooyoMooyo {
 			}
 		}
 		
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < 10; j++) {
+				System.out.print(grid[i][j]);
+			}
+			System.out.println();
+		}
+		
 		do{
 			gridChanged = false;
 			for (int row = N - 1; row >= 0; row--) {
 				for (int col = 0; col < 10; col++) {
 					if (!(grid[row][col] == 0)) { 
 						boolean delete = floodfillcheck(row, col, grid[row][col], 0);
+						System.out.println("Color: " + grid[row][col] + " Row/Col: " + row + "/" + col);
 						if (delete) floodfilldelete(row, col, grid[row][col]);
 					}
 				}
 			}
 			reformGrid();
+			for (int i = 0; i < N; i++) {
+				for (int j = 0; j < 10; j++) {
+					System.out.print(grid[i][j]);
+				}
+				System.out.println();
+			}
+			System.out.println("-------------------------");
 		} while (gridChanged);
 		
 		for (int i = 0; i < N; i++) {
