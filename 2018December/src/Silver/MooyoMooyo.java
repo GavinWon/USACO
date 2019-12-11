@@ -1,4 +1,4 @@
-//package Silver;
+package Silver;
 
 import java.util.*;
 import java.io.*;
@@ -10,10 +10,10 @@ public class MooyoMooyo {
 	private static boolean gridChanged;
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader in = new BufferedReader(new FileReader("mooyomooyo.in"));
-		PrintWriter out = new PrintWriter(new File("mooyomooyo.out"));
-//		BufferedReader in = new BufferedReader(new FileReader("/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Silver/mooyomooyo.in"));
-//		PrintWriter out = new PrintWriter(new File("/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Silver/mooyomooyo.out"));
+//		BufferedReader in = new BufferedReader(new FileReader("mooyomooyo.in"));
+//		PrintWriter out = new PrintWriter(new File("mooyomooyo.out"));
+		BufferedReader in = new BufferedReader(new FileReader("/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Silver/mooyomooyo.in"));
+		PrintWriter out = new PrintWriter(new File("/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Silver/mooyomooyo.out"));
 		
 		StringTokenizer firstLine = new StringTokenizer(in.readLine());
 		N = Integer.parseInt(firstLine.nextToken());
@@ -47,11 +47,16 @@ public class MooyoMooyo {
 						boolean[][] visited = new boolean[N][10];
 						boolean delete = floodfillcheck(row, col, grid[row][col], 1, visited);
 //						System.out.println("Color: " + grid[row][col] + " Row/Col: " + row + "/" + col);
-						if (delete) floodfilldelete(row, col, grid[row][col]);
+						boolean[][] visited1 = new boolean[N][10];
+						if (delete) { 
+							floodfilldelete(row, col, grid[row][col], visited1);
+							gridChanged = true;
+						}
 //						printGrid();
 					}
 				}
 			}
+//			reformGrid();
 		} while (gridChanged);
 		
 		
@@ -77,28 +82,30 @@ public class MooyoMooyo {
 		System.out.println("-------------------------");
 	}
 	public static boolean floodfillcheck(int row, int  col, int color, int count, boolean[][] visited) {
-		if (row >= N || row < 0 || col >= 10 || col < 0) return false;
+		if (row == N || row < 0 || col == 10 || col < 0) return false;
 		if (grid[row][col] != color) return false;
 		if (visited[row][col]) return false;
 		visited[row][col] = true;
 		if (count == K) return true;
 		
-		return floodfillcheck(row + 1, col, color, count + 1, visited) ||
+		return 
+		floodfillcheck(row + 1, col, color, count + 1, visited) ||
 		floodfillcheck(row - 1, col, color, count + 1, visited) ||
 		floodfillcheck(row, col + 1, color, count + 1,visited) ||
 		floodfillcheck(row, col - 1, color, count + 1, visited);
 		
 	}
 	
-	public static void floodfilldelete(int row, int col, int color) {
+	public static void floodfilldelete(int row, int col, int color, boolean[][] visited) {
 		if (row >= N || row < 0 || col >= 10 || col < 0) return;
 		if (grid[row][col] != color) return;
+		if (visited[row][col]) return;
+		visited[row][col] = true;
 		grid[row][col] = 0;
-		gridChanged = true;
-		floodfilldelete(row + 1, col, color);
-		floodfilldelete(row - 1, col, color);
-		floodfilldelete(row, col + 1, color);
-		floodfilldelete(row, col - 1, color);
+		floodfilldelete(row + 1, col, color, visited);
+		floodfilldelete(row - 1, col, color, visited);
+		floodfilldelete(row, col + 1, color, visited);
+		floodfilldelete(row, col - 1, color, visited);
 	}
 	
 	public static void reformGrid() {

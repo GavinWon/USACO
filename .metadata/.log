@@ -3764,3 +3764,13 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/2018December/
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2019-12-09 18:38:12.807
 !MESSAGE Cannot determine URI for '/2018December/src/Silver/MooyoMooyo.java'.
+!SESSION 2019-12-10 12:00:26.472 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/gavinwong/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/gavinwong/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-12-10 12:01:02.963
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
