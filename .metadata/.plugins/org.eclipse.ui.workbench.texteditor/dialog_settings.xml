@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="cows"/>
+		<item key="selection" value="cacheHit"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="cacheHit"/>
+			<item value="cache"/>
+			<item value="hasHorhasG"/>
+			<item value="letter"/>
 			<item value="grid"/>
 			<item value="minDistant"/>
 			<item value="temp"/>
@@ -17,6 +21,8 @@
 			<item value="int"/>
 		</list>
 		<list key="replacehistory">
+			<item value="hasHG"/>
+			<item value="desiredMilk"/>
 			<item value="cows"/>
 			<item value="timeTilNextC"/>
 			<item value="timne"/>
