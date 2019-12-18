@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;hi&apos; to &apos;BucketBrigade&apos;&#x0D;&#x0A;- Original project: &apos;30March2019&apos;&#x0D;&#x0A;- Original element: &apos;hi&apos;&#x0D;&#x0A;- Renamed element: &apos;BucketBrigade&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;hi&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{hi.java[hi" matchStrategy="1" name="BucketBrigade" qualified="false" references="true" similarDeclarations="false" stamp="1553962242415" textual="false" version="1.0"/>
-</session>

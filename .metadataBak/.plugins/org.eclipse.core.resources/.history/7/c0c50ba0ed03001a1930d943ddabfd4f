@@ -1,9 +1,0 @@
-import java.util.*;
-
-
-public class Tree {
-	
-	public static void main (String args[]) {
-		TreeMap<String, Integer> tm3 = new TreeMap();
-	}
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;mooyomooyo.out&apos; to &apos;mooyomooyo.out&apos;&#x0A;- Original project: &apos;2018December&apos;&#x0A;- Destination element: &apos;mooyomooyo.out&apos;&#x0A;- Original element: &apos;mooyomooyo.out&apos;" description="Copy file" element1="src/Silver/mooyomooyo.out" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1576011031103" target="/2018December/src/Silver/mooyomooyo.out" units="0" version="1.0"/>
-</session>
