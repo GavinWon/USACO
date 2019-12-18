@@ -1,0 +1,42 @@
+import java.util.*;
+import java.io.*;
+
+public class PaintingTheBarn {
+	
+	private static int N, K;
+	private static int[][] grid = new int[1001][1001];
+	
+	public static void main(String args[]) throws IOException {
+		Scanner in = new Scanner(new FileReader("paintbarn.in"));
+		PrintWriter out = new PrintWriter(new File("paintbarn.out"));
+//		Scanner in = new Scanner(new FileReader("/Users/gavinwong/Desktop/Repos/USACO/Random/src/paintbarn.in"));
+//		PrintWriter out = new PrintWriter(new File("/Users/gavinwong/Desktop/Repos/USACO/Random/src/paintbarn.out"));
+		int count = 0;
+		N = in.nextInt();
+		K = in.nextInt();
+		
+		for (int i = 0; i < N; i++) {
+			int lowerleftX = in.nextInt();
+			int lowerleftY = in.nextInt();
+			int upperRightX = in.nextInt();
+			int upperRightY = in.nextInt();
+			
+			for (int x = lowerleftX; x < upperRightX; x++) {
+				for (int y = lowerleftY; y < upperRightY; y++) {
+					grid[x][y] += 1;
+					if (grid[x][y] == K) 
+						count++;
+					else if (grid[x][y] == K + 1)
+						count--;
+					
+				}
+			}
+			
+		}
+		out.println(count);
+		out.close();
+//		System.out.println(count);
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+import java.util.*;
+
+
+public class Tree {
+	
+	public static void main (String args[]) {
+		TreeMap<String, Integer> tm3 = new TreeMap();
+		tm3.put("Hello", 100);
+		tm3.put("TreeMap", 89);
+		tm3.put("Hello", 100);
+		tm3.put("Hello", 100);
+		tm3.put("Hello", 100);
+	}
+}

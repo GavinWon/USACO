@@ -1,0 +1,15 @@
+import java.io.*;
+
+public class Random {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new FileReader("//Users//gavinwong//Dropbox//USACO//2011November//src//Bronze//pageant.in"));
+		String s = in.readLine();
+		int h = (int) s.charAt(0);
+		int c = (int) s.charAt(3);
+		System.out.println(h);
+		System.out.println(c);
+		//System.out.println(in.read());
+	}
+
+}

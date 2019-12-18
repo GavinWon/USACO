@@ -1,0 +1,10 @@
+package stuff;
+
+public class BovineShuffle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

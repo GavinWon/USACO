@@ -1,0 +1,53 @@
+package stuff;
+
+import java.util.*;
+import java.io.*;
+
+public class BovineShuffle {
+	
+	private static int N;
+	private static int[] shufflePattern;
+	private static int[] finalOrder;
+	private static int[] oneShufflesBefore;
+	private static int[] twoShufflesBefore;
+	private static int[] threeShufflesBefore;
+
+	public static void main(String[] args) throws IOException {
+		Scanner in = new Scanner(new FileReader("stuff"));
+		PrintWriter out = new PrintWriter(new File("stuff"));
+		
+		N = in.nextInt();
+		shufflePattern = new int[N];
+		finalOrder = new int[N];
+		oneShufflesBefore = new int[N];
+		twoShufflesBefore = new int[N];
+		threeShufflesBefore = new int[N];
+		for (int i = 0; i < N; i++) {
+			shufflePattern[i] = in.nextInt();
+		}
+		for (int i = 0; i < N; i++) {
+			finalOrder[i] = in.nextInt();
+		}
+		
+		for (int i = 0; i < N; i++) {
+			int num = shufflePattern[i];
+			oneShufflesBefore[i] = finalOrder[num];
+		}
+		
+		for (int i = 0; i < N; i++) {
+			int num = shufflePattern[i];
+			twoShufflesBefore[i] = oneShufflesBefore[num];
+		}
+		
+		for (int i = 0; i < N; i++) {
+			int num = shufflePattern[i];
+			threeShufflesBefore[i] = twoShufflesBefore[num];
+		}
+		
+		for (int i = 0; i < N; i++) {
+			System.out.println(threeShufflesBefore[])
+		}
+
+	}
+
+}

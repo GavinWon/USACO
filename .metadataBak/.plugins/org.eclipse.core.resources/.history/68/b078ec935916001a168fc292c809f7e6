@@ -1,0 +1,59 @@
+package Silver;
+
+import java.util.*;
+import java.io.*;
+
+public class DiamondCollector {
+	
+	private static int N, K;
+	private static int[] input1, input2;
+	private static int[] diamondsNearSize;
+	private static int size1 = -1, size2 = -1;
+
+	public static void main(String[] args) throws IOException{
+		Scanner in = new Scanner(new FileReader("Stuff"));
+		PrintWriter out = new PrintWriter(new File("Stuff"));
+		
+		N = in.nextInt();
+		K = in.nextInt();
+		input1 = new int[N];
+		input2 = new int[50001];
+		diamondsNearSize = new int[50001];
+		
+		for (int i = 0; i < N; i++) {
+			int temp = in.nextInt();
+			input1[i] = temp;
+			input2[temp] += 1;
+		}
+		
+		Arrays.sort(input1);
+		
+		
+		for (int i = 0; i < N; i++) {
+			if (i > 0 && input1[i] == input1[i - 1]) continue;
+			int surroundings = numOfSurrDiamonds(input1[i]);
+			diamondsNearSize[input1[i]] = surroundings;
+		}
+		
+		for (int i = 0; i < N; i++) {
+			int size = input1[i];
+			if (input2[size] + diamondsNearSize[size] > size1) {
+				size1 = input2[size]  + diamondsNearSize[size];
+			} else if (input2[size] + diamondsNearSize[size] > size2) {
+				
+			}
+		}
+		
+
+	}
+	
+	public static int numOfSurrDiamonds(int size) {
+		int count = 0;
+		for (int add = -K; add <= K; add++) {
+			if (size + add > 1000000000 || size + add < 1) continue;
+			count += input[size + add];
+		}
+		return count;
+	}
+
+}

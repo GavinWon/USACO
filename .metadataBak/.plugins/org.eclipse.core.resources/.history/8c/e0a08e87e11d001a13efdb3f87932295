@@ -1,0 +1,14 @@
+package stuff;
+
+import java.util.*;
+import java.io.*;
+
+public class BovineShuffle {
+
+	public static void main(String[] args) throws IOException {
+		Scanner in = new Scanner(new FileReader("stuff"));
+		PrintWriter out = new PrintWriter(new File("stuff"));
+
+	}
+
+}

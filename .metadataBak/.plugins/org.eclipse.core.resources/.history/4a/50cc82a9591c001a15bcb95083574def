@@ -1,0 +1,29 @@
+import java.util.*;
+import java.io.*;
+
+public class PaintingTheBarn {
+	
+	private static int N, K;
+	private static int[][] grid = new int[1001][1001];
+	
+	public static void main(String args[]) throws IOException {
+		Scanner in = new Scanner(new FileReader("hi"));
+		PrintWriter out = new PrintWriter(new File("hi"));
+		N = in.nextInt();
+		K = in.nextInt();
+		
+		for (int i = 0; i < N; i++) {
+			int lowerleftX = in.nextInt();
+			int lowerleftY = in.nextInt();
+			int upperRightX = in.nextInt();
+			int upperRightY = in.nextInt();
+			
+			for (int x = lowerleftX; x <= upperRightX; x++) {
+				for (int y = lowerleftY; y <= upperRightY; y++) {
+					gird[x][y]++;
+				}
+			}
+		}
+	}
+
+}

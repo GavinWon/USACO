@@ -1,0 +1,13 @@
+package stuff;
+
+import java.util.*;
+import java.io.*;
+
+public class BovineShuffle {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

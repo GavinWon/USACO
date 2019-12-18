@@ -1,0 +1,110 @@
+package Bronze;
+
+import java.util.*;
+import java.io.*;
+
+public class BackAndForth {
+
+	
+	
+	private static ArrayList<Integer> b1 = new ArrayList<Integer>();
+	
+	private static ArrayList<Integer> b2 = new ArrayList<Integer>();
+	
+	private static int[] bucketsMoved = new int [4];
+	private static boolean[] possibleValues = new boolean[2001];
+	
+	public static void main(String[] args) throws Exception {
+		Scanner in = new Scanner(new FileReader("/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Bronze/backforth.in"));
+		PrintWriter out = new PrintWriter(new File("/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Bronze/backforth.out"));
+		
+		for (int i = 0; i < 10; i++) {
+			b1.add(in.nextInt());
+		}
+		
+		for (int i = 0; i < 10; i++) {
+			b2.add(in.nextInt());
+		}
+		
+		for (int i = 0; i < 10; i++) {
+			tuesday(i, b1, b2);
+		}
+		
+		int counter = 0;
+		for (int i = 0; i < 2001; i++) {
+			if (possibleValues[i]) {
+				counter++;
+			}
+		}
+		
+		System.out.print(counter);
+		out.print(counter);
+		out.close();
+		
+	}
+	
+	//going from first barn to second barn
+	public static void tuesday(int milkBucket, ArrayList barn1, ArrayList barn2) {
+
+		ArrayList<Integer> temp1 = new ArrayList<Integer>(barn1);
+		ArrayList<Integer> temp2 = new ArrayList<Integer>(barn2);
+		temp2.add(temp1.get(milkBucket));
+		temp1.remove(milkBucket);
+		for (int i = 0; i < 10; i++) {
+			
+		}
+	}
+	
+	//going from second barn to first barn
+	public static void wednesday() {
+		for (int i = 0; i < 11; i++) {
+			emptyb2 = i;
+			bucketsMoved[1] = b2[emptyb2];
+			b1[emptyb1] = b2[i];
+			int[] temp = bucketsMoved;
+			int[] b1temp = b1;
+			int[] b2temp = b2;
+			thursday();
+			b1 = b1temp;
+			b2 = b2temp;
+			bucketsMoved = temp;
+			
+		}
+	}
+	
+	//going from first barn to second barn
+	public static void thursday() {
+		for (int i = 0; i < 10; i++) {
+			emptyb1 = i;
+			bucketsMoved[2] = b1[emptyb1];
+			b2[emptyb2] = b1[emptyb1];
+			int[] temp = bucketsMoved;
+			int[] b1temp = b1;
+			int[] b2temp = b2;
+			friday();
+			b1 = b1temp;
+			b2 = b2temp;
+			bucketsMoved = temp;
+		}
+	}
+	
+	public static void friday() {
+		for (int i = 0; i < 11; i++) {
+			emptyb2 = i;
+			bucketsMoved[3] = b2[emptyb2];
+			
+			int change = bucketsMoved[3] + bucketsMoved[1] - bucketsMoved[2] - bucketsMoved[0];
+			if (!possibleValues[1000 + change]) {
+				System.out.println(1000 + change);
+//				if (1000 + change == 1001) {
+//					for (int j = 0; j <= 3; j++) {
+//						System.out.print(bucketsMoved[j] + " ");
+//					}
+//				}
+				System.out.println();
+			}
+			possibleValues[1000+change] = true;
+		}
+	}
+
+}

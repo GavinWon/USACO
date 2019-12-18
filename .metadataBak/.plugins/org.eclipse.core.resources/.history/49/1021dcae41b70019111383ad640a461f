@@ -1,0 +1,40 @@
+import java.util.*;
+import java.io.*;
+
+public class DecoratingPastures {
+	
+	static int N, M;
+	static boolean[][] connections;
+	static int countJ, countF;
+
+	public static void main(String[] args) throws IOException {
+		Scanner in = new Scanner(new FileReader("Users/Gavin/Dropbox/USACO/April2014/src/decorate.in"));
+		PrintWriter out = new PrintWriter((new FileWriter("/Users/Gavin/Dropbox/USACO/April2014/src/decorate.out")));
+		
+		N = in.nextInt();
+		M = in.nextInt();
+		connections = new boolean[N][N];
+		
+		for (int i = 0; i < M; i++) {
+			int past1 = in.nextInt();
+			int past2 = in.nextInt();
+			connections[past1][past2] = connections[past2][past1] = true;
+		}
+		
+		for (int i = 0; i < N; i++) {
+			floodfill('F' , 1);
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	public static boolean floodfill(char letter, int pastureID) {
+		return true;
+	}
+
+}
