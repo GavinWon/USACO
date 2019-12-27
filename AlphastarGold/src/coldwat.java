@@ -13,7 +13,7 @@ public class coldwat {
 		int N = in.nextInt();
 		int C = in.nextInt();
 		connections = new int[N + 1][2];
-		distances = new int[N + 1];
+		distances = new int[N + 1];	
 		parents = new int[N + 1];
 		for (int i = 0; i < C; i++) {
 			int endP = in.nextInt();
