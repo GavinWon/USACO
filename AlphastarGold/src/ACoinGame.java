@@ -15,7 +15,7 @@ public class ACoinGame {
 		coins = new int[N + 1];
 		dp = new int[N + 1][N + 1]; //print out dp[N][1]
 		for (int i = 0; i < N; i++) {
-			dp[0][i + 1] = 0;
+			//dp[0][i + 1] = 0; not needed since already initialize with zero
 			coins[i + 1] = in.nextInt();
 			totalValue += coins[i + 1];
 		}
@@ -23,17 +23,18 @@ public class ACoinGame {
 		for (int i = N - 1; i > 0; i--) {
 			coinSum[i] = coinSum[i + 1] - coins[i + 1]; //prefix sum
 		}
-		
+		System.out.println(dp[N][0]);
 		System.out.println(Arrays.toString(coinSum));
-		
 		for (int c = 1; c <= N; c++) {
 			for (int p = 1; p <= N; p++) {
 				int temp = dp[c][p - 1];
-				if (2 * p > c) {
-					break;
+				dp[c][p] = Integer.MIN_VALUE;
+				if (c - (2 * p - 1) >= 0) {
+					dp[c][p] = Math.max(dp[c][p], coinSum[c] - dp[c - (2 * p - 1)][2 * p - 1]);
+				} 
+				if (c - (2 * p) >= 0) {
+					dp[c][p] = Math.max(dp[c][p], coinSum[c] - dp[c - (2 * p)][2 * p]);
 				}
-				System.out.println(c + " " + p);
-				dp[c][p] = Math.max(coinSum[c] - dp[c - (2 * p - 1)][2 * p - 1], coinSum[c] - dp[c - 2 * p][2 * p]); //fix when index turns negative
 				dp[c][p] = Math.max(dp[c][p], temp);
 			}
 		}
