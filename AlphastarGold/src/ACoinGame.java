@@ -19,21 +19,22 @@ public class ACoinGame {
 			coins[i + 1] = in.nextInt();
 			totalValue += coins[i + 1];
 		}
-		coinSum[N] = totalValue;
-		for (int i = N - 1; i > 0; i--) {
-			coinSum[i] = coinSum[i + 1] - coins[i + 1]; //prefix sum
+		
+		coinSum[1] = coins[N];
+		for (int i = 2; i <= N ; i++) {
+			coinSum[i] = coinSum[i - 1] + coins[N - i + 1];
 		}
-		System.out.println(dp[N][0]);
-		System.out.println(Arrays.toString(coinSum));
+		
+
 		for (int c = 1; c <= N; c++) {
 			for (int p = 1; p <= N; p++) {
 				int temp = dp[c][p - 1];
 				dp[c][p] = Integer.MIN_VALUE;
+				if (c - 2 * p >= 0) {
+					dp[c][p] = Math.max(dp[c][p], coinSum[c] - dp[c - (2 * p)][2 * p]);
+				} 
 				if (c - (2 * p - 1) >= 0) {
 					dp[c][p] = Math.max(dp[c][p], coinSum[c] - dp[c - (2 * p - 1)][2 * p - 1]);
-				} 
-				if (c - (2 * p) >= 0) {
-					dp[c][p] = Math.max(dp[c][p], coinSum[c] - dp[c - (2 * p)][2 * p]);
 				}
 				dp[c][p] = Math.max(dp[c][p], temp);
 			}
