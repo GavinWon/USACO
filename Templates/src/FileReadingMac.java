@@ -1,9 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-public class FileReadingWindows {
+public class FileReadingMac {
 	
-	private static String DEF_PARENT_DIR = "D:\\Repos\\USACO\\2019December\\src\\Gold\\";
+	private static String DEF_PARENT_DIR = "/Users/gavinwong/Desktop/Repos/USACO/2018December/src/Gold/";
 
 	private static String getBaseFilePath() {
 		File dir = new File(DEF_PARENT_DIR);
